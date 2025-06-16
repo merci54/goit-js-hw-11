@@ -11,7 +11,8 @@ function handleSubmit(e) {
     clearGallery();
 
     // отримання даних та рендер
-    getImagesByQuery(refs.input.value);
+    getImagesByQuery(refs.input.value.trim());
+    console.log(refs.input.value.trim())
 
 }
 

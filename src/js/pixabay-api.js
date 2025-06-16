@@ -15,6 +15,16 @@ const API_URL = 'https://pixabay.com/api/';
 
 export function getImagesByQuery(query) {
 
+    if (!query) {
+        // сповіщення для користувачів
+        iziToast.error({
+            message: 'Sorry, there are no images matching your search query. Please try again!',
+            position: 'topRight',
+
+        })
+        return
+    }
+
     // додавання лоадера
     showLoader();
 
@@ -34,6 +44,7 @@ export function getImagesByQuery(query) {
 
             // якщо не знайшло жодного результату
             if (data.hits.length === 0) {
+                // сповіщення для користувачів
                 iziToast.error({
                     message: 'Sorry, there are no images matching your search query. Please try again!',
                     position: 'topRight',
