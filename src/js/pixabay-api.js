@@ -17,7 +17,7 @@ export function getImagesByQuery(query) {
             q: query,
             image_type: 'photo',
             orientation: "horizontal",
-            safesearch: 'false',
+            safesearch: 'true',
         }
     })
 
