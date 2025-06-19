@@ -3,7 +3,7 @@ import axios from "axios";
 import { showLoader } from "./render-functions";
 
 const API = '50766581-35cab7d84125eeb0dc75e938a';
-const API_URL = 'https://pixabay.com/api/e';
+const API_URL = 'https://pixabay.com/api/';
 
 
 export function getImagesByQuery(query) {
